@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0
+    ports:
+      - "3346:3306"
+    environment:
+      MYSQL_DATABASE: laravel_shop
+      MYSQL_ROOT_PASSWORD: root
+      TZ: "Europe/Paris"
+    volumes:
+      - ./docker/db:/var/lib/mysql
